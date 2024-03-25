@@ -39,7 +39,7 @@ fn do_a_bloom_pass(img: &RgbaImage, depth: u8) -> RgbaImage {
             img,
             img.width() / (2_u32.pow(depth as u32)),
             img.height() / (2_u32.pow(depth as u32)),
-            imageops::FilterType::Triangle,
+            imageops::FilterType::Gaussian,
         ),
         img.width(),
         img.height(),
